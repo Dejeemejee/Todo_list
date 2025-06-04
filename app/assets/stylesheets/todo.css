@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#todo_lists-index-page {
+    padding: 0;
+
+}
+.todo_lists-index-page {
+
+    /* text-align: center; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.todo_lists-index-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+/* Style the todo list */
+.todo_lists-index-page ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 100%;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.todo_lists-index-page ul > li {
+    list-style: none;
+}
+
+.todo_lists-index-page ul > li:hover,
+.todo_lists-index-page ul > li:focus-within {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    border-color: rgba(99, 77, 77, 0.4);
+}
+.todo_lists-index-page div  a.title {
+  display: flex;
+  justify-content: center;
+}
+
+.todo_lists-index-page .title {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.todo_lists-index-page .title:focus {
+    outline: none;
+    background-color: #e9ecef;
+    box-shadow: 0 0 0 3px rgba(99, 77, 77, 0.2);
+}
+.todo_lists-index-page ul > li {
+    background: linear-gradient(135deg, #ffffff 0%, #e7daf3cf 100%);
+    border-radius: 1.5rem;
+    color:#000000;
+}
+.todo_lists-index-page .description {
+   /* margin-left: 0; */
+   margin-top: 3px;
+   height: 8rem;
+   border-radius: 4px;
+   
+}
+.todo_lists-index-page div.description {
+   word-wrap: break-word;
+}
+
+.edit-btn, .delete-btn {
+  background: linear-gradient(45deg, #e9a0ef, #3f1c60); /* Yellowish */
+  color: #e1cee9;
+  padding: 6px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  width: 5rem;
+}
+
+
+
+.todo_lists-index-page a.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    /* cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: colorFlash 2s infinite; */
+    margin-top: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    width: clamp(25px, 10rem,  40%);
+    
+}
+
+.todo_lists-new-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo_lists-new-page form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 25px 20px 25px;
+}
+
+.todo_lists-new-page label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+
+.todo_lists-new-page  input[name="todo_list[title]"] {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 12px;
+    background: #f8f9fa;
+    /* transition: all 0.3s ease;
+  outline: none; */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    
+}
+
+.todo_lists-new-page  textarea[name="todo_list[description]"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    background: #f8f9fa;
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.todo_lists-new-page input[name="todo_list[due_date]"],
+.todo_lists-new-page input[name="todo_list[created_at]"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background: #f8f9fa;
+    /* transition: all 0.3s ease;
+  outline: none; */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.todo_lists-new-page input[type="checkbox"] {
+    width: 100%;
+    height: 20px;
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+.todo_lists-new-page input[type="submit"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-sizing: border-box;
+}
+
+.todo_lists-new-page form::before {
+    content: "✨ Create New Task";
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.todo_lists-index-page p {
+    color: rgba(44, 11, 56, 0.841);
+    text-align: center;
+    font-weight: 400;
+}
